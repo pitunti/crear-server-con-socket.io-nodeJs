@@ -6,9 +6,9 @@ const options={
 const io = require("socket.io",options);//Ejecuta socket.io
 
 io.on("connection",(socket)=>{
-  socket.on("msg",(msg)=>{
-    socket.emit("msg","hello");
-    io.emit("msg","hello");//
+  socket.on("msg",(msg)=>{//Cuando el cliente envie un mensaje
+    socket.emit("msg","hello");//Envia un mesaje al usuario (UNICAMENTE)
+    io.emit("msg","hello");//Envia un mensage a (TODOS) los usuarios
   })
 })
 
