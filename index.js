@@ -12,4 +12,6 @@ io.on("connection",(socket)=>{
   })
 })
 
+
+
 io.listen(1212)//Inicia el socket server. Solo se especifica el puerto para la coneccion
