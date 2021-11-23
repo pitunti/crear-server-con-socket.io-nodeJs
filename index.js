@@ -3,7 +3,7 @@ const options={
     origin:"*" /*Permitir todas las conecciones si quieres que solo se permita un dominio en especifico por ejemplo https://localhost*/
   }
 }
-const io = require("socket.io",options);//Ejecuta socket.io
+const io = require("socket.io")(options);//Ejecuta socket.io
 
 io.on("connection",(socket)=>{
   socket.on("msg",(msg)=>{//Cuando el cliente envie un mensaje
